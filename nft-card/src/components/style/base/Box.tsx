@@ -1,16 +1,21 @@
 import styled from 'styled-components';
-import { calculateWidth } from './utils/utils';
+import { calculateWidth } from '../utils/utils';
 
 const Box = styled.div<any>`
   height: ${({ height }) => height || 'auto'};
+  position: ${({ position }) => position};
+  top: ${({ top }) => top};
+  bottom: ${({ bottom }) => bottom};
+  left: ${({ left }) => left};
+  right: ${({ right }) => right};
   background-color: ${({ bg, theme }) => theme.colors[bg] || bg};
-  border: ${({ border }) => border || ''};
-  border-inline: ${({ borderInline }) => borderInline || ''};
-  border-inline-start: ${({ borderInlineStart }) => borderInlineStart || ''};
-  border-inline-end: ${({ borderInlineEnd }) => borderInlineEnd || ''};
-  border-block: ${({ borderBlock }) => borderBlock || ''};
-  border-block-start: ${({ borderBlockStart }) => borderBlockStart || ''};
-  border-block-end: ${({ borderBlockEnd }) => borderBlockEnd || ''};
+  border: ${({ border }) => border};
+  border-inline: ${({ borderInline }) => borderInline};
+  border-inline-start: ${({ borderInlineStart }) => borderInlineStart};
+  border-inline-end: ${({ borderInlineEnd }) => borderInlineEnd};
+  border-block: ${({ borderBlock }) => borderBlock};
+  border-block-start: ${({ borderBlockStart }) => borderBlockStart};
+  border-block-end: ${({ borderBlockEnd }) => borderBlockEnd};
   padding: ${({ padding }) => padding};
   padding-block: ${({ paddingBlock }) => paddingBlock};
   padding-block-start: ${({ paddingBlockStart }) => paddingBlockStart};

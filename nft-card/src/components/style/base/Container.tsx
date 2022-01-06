@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Box from './Box';
-import { calculateWidth } from './utils/utils';
+import { calculateWidth } from '../utils/utils';
 
 const Container = styled(Box)<any>`
   display: grid;

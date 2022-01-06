@@ -8,6 +8,7 @@ const Text = styled.span<any>`
   font-size: ${({ fontSize }) => fontSize};
   font-weight: ${({ fontWeight }) => fontWeight};
   width: ${({ width }) => width};
+  
 `;
 
 export default Text;

@@ -1,6 +1,7 @@
 import React from 'react';
-import { Stack, Text, Container, Img, Icon, Hr } from './components/style';
-import Box from './components/style/Box';
+import { Overlay } from './components/style';
+import { Stack, Text, Container, Img, Icon, Hr } from './components/style/base';
+import Box from './components/style/base/Box';
 
 const App = () => (
   <Container bg="darkest-blue">
@@ -10,11 +11,18 @@ const App = () => (
       padding={'20px'}
       borderRadius={'14px'}
     >
-      <Img
-        width="280px"
-        src="../public/image-equilibrium.jpg"
-        alt="A photo of a cube"
-      />
+      <Box position="relative">
+        <Img
+          width="280px"
+          src="../public/image-equilibrium.jpg"
+          alt="A photo of a cube"
+          borderRadius={'15px'}
+        />
+        <Overlay display="flex" justify="center" align="center">
+          <Text>Hola!</Text>
+        </Overlay>
+      </Box>
+
       <Text fontSize="20px" fontWeight="bold" color="white">
         Equilibrium #3429
       </Text>
