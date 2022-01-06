@@ -1,14 +1,6 @@
 import styled from 'styled-components';
 import Box from './Box';
-
-const calculateWidth = (width: any, media: any) => {
-  if (width[media]) {
-    return width[media];
-  } else if (typeof width === 'string') {
-    return width;
-  }
-  return '100%';
-};
+import { calculateWidth } from './utils/utils';
 
 const Container = styled(Box)<any>`
   display: grid;
@@ -16,18 +8,15 @@ const Container = styled(Box)<any>`
   width: 100%;
   place-items: center;
   @media (min-width: ${({ theme }) => theme.media.sm}) {
-    width: ${({ width }) => calculateWidth(width, 'sm')};
+    width: ${({ width }) => calculateWidth(width, 'sm') || '100%'};
   }
   @media (min-width: ${({ theme }) => theme.media.md}) {
-    background: pink;
-    width: ${({ width }) => calculateWidth(width, 'md')};
+    width: ${({ width }) => calculateWidth(width, 'md') || '100%'};
   @media (min-width: ${({ theme }) => theme.media.lg}) {
-    background: green;
-    width: ${({ width }) => calculateWidth(width, 'lg')};
+    width: ${({ width }) => calculateWidth(width, 'lg') || '100%'};
   }
   @media (min-width: ${({ theme }) => theme.media.xl}) {
-    background: yellow;
-    width: ${({ width }) => calculateWidth(width, 'xl')};
+    width: ${({ width }) => calculateWidth(width, 'xl') || '100%'};
   } ;
 `;
 

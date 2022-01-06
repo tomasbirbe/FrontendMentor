@@ -3,5 +3,6 @@ import Text from './Text';
 import Container from './Container';
 import Img from './Img';
 import Icon from './Icon';
+import Hr from './Hr';
 
-export { Stack, Text, Container, Img, Icon };
+export { Stack, Text, Container, Img, Icon, Hr };
