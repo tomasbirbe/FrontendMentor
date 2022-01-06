@@ -2,7 +2,7 @@ import React from 'react';
 import { Overlay } from './components/style';
 import { Stack, Text, Container, Img, Icon, Hr } from './components/style/base';
 import Box from './components/style/base/Box';
-import equilibrium from '/image-equilibrium.jpg';
+import '/image-equilibrium.jpg';
 
 const App = () => (
   <Container bg="darkest-blue">
@@ -15,7 +15,7 @@ const App = () => (
       <Box position="relative">
         <Img
           width="280px"
-          src={equilibrium}
+          src="/image-equilibrium.jpg"
           alt="A photo of a cube"
           borderRadius={'15px'}
         />
