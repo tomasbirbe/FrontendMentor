@@ -19,13 +19,20 @@ const App = () => (
           borderRadius={'15px'}
         />
         <Overlay display="flex" justify="center" align="center">
-          <Text>Hola!</Text>
+          <Icon src="../public/icon-view.svg" color="white" opacity={'1'} />
         </Overlay>
       </Box>
 
-      <Text fontSize="20px" fontWeight="bold" color="white">
-        Equilibrium #3429
-      </Text>
+      <Box
+        hover={{ color: 'cyan' }}
+        color="soft-blue"
+        cursor="pointer"
+        transition="all 0.2s ease"
+      >
+        <Text fontSize="20px" fontWeight="bold">
+          Equilibrium #3429
+        </Text>
+      </Box>
       <Text color="soft-blue" fontWeight="300" width="250px" fontSize="16px">
         Our equilibrium collection promotes balance and calm
       </Text>
@@ -37,21 +44,41 @@ const App = () => (
         align="center"
       >
         <Stack direction="row" gap="5px" align="center">
-          <Icon boxSize="20px" src="../public/icon-ethereum.svg" />
+          <Icon
+            boxSize="20px"
+            src="../public/icon-ethereum.svg"
+            color={'cyan'}
+          />
           <Text color="cyan">0.041 ETH</Text>
         </Stack>
         <Stack direction="row" gap="7px" align="center">
-          <Icon boxSize="17px" src="../public/icon-clock.svg" />
+          <Icon
+            boxSize="17px"
+            src="../public/icon-clock.svg"
+            color={'soft-blue'}
+          />
           <Text color="soft-blue">3 days left</Text>
         </Stack>
       </Stack>
       <Hr />
       <Stack direction="row" gap="15px" width="100%" align="center">
         <Box border={'1px solid white'} borderRadius={'50%'}>
-          <Icon boxSize={'30px'} src="../public/image-avatar.png" />
+          <Img
+            width="30px"
+            src="../public/image-avatar.png"
+            color={'soft-blue'}
+          />
         </Box>
         <Text color="soft-blue" fontSize="13px">
-          Creation of <Text color="white">Jules Wyvern</Text>
+          Creation of{' '}
+          <Box
+            cursor={'pointer'}
+            hover={{ color: 'cyan' }}
+            transition="all 0.2s ease"
+            color={'white'}
+          >
+            <Text>Jules Wyvern</Text>
+          </Box>
         </Text>
       </Stack>
     </Stack>

@@ -2,6 +2,10 @@ import styled from 'styled-components';
 import { calculateWidth } from '../utils/utils';
 
 const Box = styled.div<any>`
+  display: inline-block;
+  cursor: ${({ cursor }) => cursor || 'initial'};
+  transition: ${({ transition }) => transition};
+  color: ${({ color, theme }) => theme.colors?.[color] || color || 'inherit'};
   height: ${({ height }) => height || 'auto'};
   position: ${({ position }) => position};
   top: ${({ top }) => top};
@@ -31,6 +35,15 @@ const Box = styled.div<any>`
   margin-inline-start: ${({ paddingInlineStart }) => paddingInlineStart};
   margin-inline-end: ${({ paddingInlinEnd }) => paddingInlinEnd};
   border-radius: ${({ borderRadius }) => borderRadius || '0px'};
+  &:hover {
+    ${({ hover, theme }) => ({
+      ...hover,
+      color: theme.colors?.[`${hover?.color}`] || hover?.color || 'inherit',
+    })}
+  }
+  &:focus {
+    ${({ focus }) => focus}
+  }
   @media (max-width: ${({ theme }) => theme.media.sm}) {
     width: ${({ width }) => calculateWidth(width, 'sm') || 'fit-content'};
     max-width: ${({ theme }) => theme.media.xs};
