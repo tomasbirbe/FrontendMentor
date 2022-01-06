@@ -1,14 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalTheme = createGlobalStyle`
-  :root {
-    --soft-blue: var(hsl(215, 51%, 70%));
-    --cyan: var(hsl(178, 100%, 50%));
-    --darkest-blue: var(hsl(217, 54%, 11%));
-    --darker-blue: var(hsl(216, 50%, 16%));
-    --dark-blue: var(hsl(215, 32%, 27%));
-    --white: var(hsl(0, 0%, 100%));
-  }
+const GlobalStyle = createGlobalStyle`
   *,
   *::before,
   *::after {
@@ -20,9 +12,13 @@ const GlobalTheme = createGlobalStyle`
   body,
   #root {
     height: 100%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Outfit', sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    width:100%;
   }
-
+  
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -59,4 +55,4 @@ const GlobalTheme = createGlobalStyle`
   }
 `;
 
-export default GlobalTheme;
+export default GlobalStyle;

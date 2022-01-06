@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const P = styled.p`
-  color: red;
-  background: var('--soft-blue');
+const Text = styled.span<any>`
+  color: ${(props) =>
+    props.theme.colors[props.color] || props.color || 'white'};
+  opacity: ${({ opacity }) => opacity};
+  font-size: ${({ fontSize }) => fontSize};
+  font-weight: ${({ fontWeight }) => fontWeight};
+  width: ${({ width }) => width};
 `;
 
-const Text = ({ children }: any): JSX.Element => {
-  return <P>{children}</P>;
-};
-
-export { Text };
+export default Text;
