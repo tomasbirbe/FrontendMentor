@@ -14,7 +14,7 @@ const App = () => (
       <Box position="relative">
         <Img
           width="280px"
-          src="../public/image-equilibrium.jpg"
+          src="../dist/image-equilibrium.jpg"
           alt="A photo of a cube"
           borderRadius={'15px'}
         />
